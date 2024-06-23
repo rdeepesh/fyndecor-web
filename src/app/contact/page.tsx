@@ -115,7 +115,7 @@ const ContactUS = () => {
                 {...getFieldProps("Message")}
                 placeholder="Message*"
                 className="px-2 pt-3 bg-white text-black w-full text-sm border-b-2 focus:border-[#333] outline-none"
-                rows={5}
+                rows="5"
               ></textarea>
               {errors.Message && touched.Message ? (
                 <span className="text-red-500 text-[12px] ml-2">
