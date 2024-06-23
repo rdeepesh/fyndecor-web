@@ -351,7 +351,7 @@ header.header nav ul li a:hover{
   color: rgba(var(--black-rgb),.7);
 }
 .enquiry__form__section .form__wrapper form{
-  width: 66%;
+  width: 780px;
   padding-top: 15px;
 }
 .enquiry__form__section .form__wrapper form .form__row{
