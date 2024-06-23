@@ -914,8 +914,51 @@ header.header nav ul li a:hover{
     font-weight: var(--fw-semibold);
     margin-left: 8px;
   }
-
-
+  .furniture__cards .fancy__card{
+    min-height: 180px;
+    align-items: end;
+  }
+  .furniture__cards .fancy__card .content p{
+    display: none;
+  }
+  .furniture__cards .fancy__card .content .mob__p{
+    display: block;
+  }
+  .furniture__cards__2{
+    overflow-x: auto;
+    display: flex;
+  }
+  .furniture__cards__2 .fancy__card{
+    min-width: 225px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .furniture__cards__2 .fancy__card img{
+    border-radius: 0;
+    max-height: 155px;
+  }
+  .furniture__cards__2 .fancy__card .content{
+    margin-top: 0;
+    border-radius: 0;
+    padding: 10px;
+    width: 100%;
+  }
+  .furniture__cards__2 .fancy__card .content .tag {
+    font-size: 12px;
+    font-weight: var(--fw-semibold);
+  }
+  .furniture__cards__2 .fancy__card .content h5,
+  .furniture__cards__2 .fancy__card .content .price__wrapper .price{
+    font-size: 16px;
+  }
+  .furniture__cards__2 .fancy__card .content p,
+  .furniture__cards__2 .fancy__card .content .price__wrapper a{
+    font-size: 14px;
+  }
+  .feedback__wrapper .feedback__card{
+    min-width: 100%;
+    max-width: 100%;
+  }
 
 
   .enquiry__section{

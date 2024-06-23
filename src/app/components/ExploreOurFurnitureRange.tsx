@@ -18,6 +18,7 @@ const ExploreOurFurnitureRange = () => {
               kitchen, bedroom, living room and more, to help you pick a design
               that will best suit your home interior requirements.
             </p>
+            <p className="mob__p">Curtains for bedrooms</p>
           </div>
         </div>
         <div className="fancy__card card2">
