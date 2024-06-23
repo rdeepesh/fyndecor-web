@@ -2,6 +2,7 @@ import React from "react";
 import cur_01 from "../assets/images/curtains_01.jpg";
 import Image from "next/image";
 import Link from "next/link";
+import { MOBILE_NO } from "../utils";
 
 const ExploreOurFurnitureRange2 = () => {
   return (
@@ -21,7 +22,7 @@ const ExploreOurFurnitureRange2 = () => {
             <p>For Make beautiful home</p>
             <div className="price__wrapper">
               <span className="price">₹4000/-</span>
-              <Link href={`tel:${process.env.MOBILE_NO}`}>Call Now</Link>
+              <Link href={`tel:${MOBILE_NO}`}>Call Now</Link>
             </div>
           </div>
         </div>
@@ -33,7 +34,7 @@ const ExploreOurFurnitureRange2 = () => {
             <p>For Make beautiful home</p>
             <div className="price__wrapper">
               <span className="price">₹4000/-</span>
-              <Link href={`tel:${process.env.MOBILE_NO}`}>Call Now</Link>
+              <Link href={`tel:${MOBILE_NO}`}>Call Now</Link>
             </div>
           </div>
         </div>
@@ -45,7 +46,7 @@ const ExploreOurFurnitureRange2 = () => {
             <p>For Make beautiful home</p>
             <div className="price__wrapper">
               <span className="price">₹4000/-</span>
-              <Link href={`tel:${process.env.MOBILE_NO}`}>Call Now</Link>
+              <Link href={`tel:${MOBILE_NO}`}>Call Now</Link>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import logo from "../assets/logo/logo.svg";
 import Link from "next/link";
 import { useState } from "react";
+import { MOBILE_NO } from "../utils";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -45,8 +46,8 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <Link href={`tel:${process.env.MOBILE_NO}`} className="btn">
-        Call Us: {process.env.MOBILE_NO}
+      <Link href={`tel:${MOBILE_NO}`} className="btn">
+        Call Us: {MOBILE_NO}
       </Link>
     </header>
   );
