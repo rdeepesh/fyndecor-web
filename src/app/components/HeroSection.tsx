@@ -1,7 +1,3 @@
-import Image from "next/image";
-import freeMeasurement from "../assets/icons/free-measurement.svg";
-import noInstallationCharges from "../assets/icons/no-installation-charges.svg";
-import yearOfExpertise from "../assets/icons/year-of-expertise.svg";
 
 const HeroSection = () => {
   const SVG_01 = () => (
