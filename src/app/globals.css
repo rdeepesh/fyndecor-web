@@ -729,6 +729,9 @@ header.header nav ul li a:hover{
 .menu__toggler{
   display: none;
 }
+.we__provide__section__mob{
+  display: none;
+}
 /* TABLET */
 @media screen and (max-width: 991px) {
   .enquiry__section{
@@ -789,6 +792,7 @@ header.header nav ul li a:hover{
   .hero__section{
     padding: 0 var(--container-px-sm);
     height: 460px;
+    background-image: url(assets/images/Hero_banner_mob.png);
   }
   /* common heading */
   .hero__section .content h2,
@@ -891,6 +895,29 @@ header.header nav ul li a:hover{
   .we__deliver__best__quality__section p {
     font-size: 12px;
   }
+  .we__provide__section__mob{
+    display: flex;
+    flex-direction: column;
+  }
+  .we__provide__section__mob .our__services{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .we__provide__section__mob .our__services svg{
+    width: 24px;
+    height: 24px;
+  }
+  .we__provide__section__mob .our__services h5{
+    font-size: 12px;
+    font-family: var(--ff-montserrat);
+    font-weight: var(--fw-semibold);
+    margin-left: 8px;
+  }
+
+
+
+
   .enquiry__section{
     flex-direction: column;
   }
