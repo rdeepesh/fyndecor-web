@@ -1,5 +1,10 @@
+import React from 'react';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  onEnquireNowClick: () => void;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ onEnquireNowClick }) =>  {
   const SVG_01 = () => (
     <svg
       width="24"
@@ -99,12 +104,9 @@ const HeroSection = () => {
   return (
     <section className="hero__section">
       <div className="content">
-        <h2>Choose top product for home decoration </h2>
+        <h1>Customised Curtains, <br className="display_hide_text"/>Blinds Stitching and Fitting Services</h1>
         <p>
-          Be it end-to-end interiors, renovation or modular solutions, we have
-          it all for your home or office. With a wide range of furniture &
-          decor, we have your back from start to finish.
-        </p>
+        We have lots of experience making custom curtains and blinds at FynDecor. Take advantage of our hassle-free, fast shipping and free measuring service.</p>
         <div className="we__provide__section__mob">
           <div className="our__services">
             <SVG_01 />
@@ -119,8 +121,8 @@ const HeroSection = () => {
             <h5>25+ year of expertise</h5>
           </div>
         </div>
-        <button type="button" className="btn">
-          Book Appointment
+        <button type="button" className="btn" onClick={onEnquireNowClick}>
+          Enquire Now
         </button>
       </div>
     </section>

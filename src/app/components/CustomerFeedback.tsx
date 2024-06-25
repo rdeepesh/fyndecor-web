@@ -20,7 +20,7 @@ const CustomerFeedback = () => {
   return (
     <section className="customer__feedback__section">
       <h2>Expressions of Our Happy Customers</h2>
-      <p>
+      <p className="mobile_hide">
         Be it end-to-end interiors, renovation or modular solutions, we have it
         all for your home or office. With a wide range of furniture & decor, we
         have your back from start to finish.
@@ -34,11 +34,10 @@ const CustomerFeedback = () => {
             <Star />
             <Star />
           </span>
-          <h5>{`Swati Singh`}</h5>
+          <h5>{`Urvashi Malhotra`}</h5>
           <p>
             {`Thanks to Fyn Decor.`} <br />
-            {`Desperately wanted a bigger bed for my son's room. Picked Williams
-            Bed with lovely finish.`}
+            {`You designed it exactly as I had thought and I am very happy.`}
           </p>
         </div>
         <div className="feedback__card">
@@ -49,11 +48,9 @@ const CustomerFeedback = () => {
             <Star />
             <Star />
           </span>
-          <h5>{`Swati Singh`}</h5>
+          <h5>{`Deepesh Rohilla`}</h5>
           <p>
-            {`Thanks to Fyn Decor.`} <br />
-            {`Desperately wanted a bigger bed for my son's room. Picked Williams
-            Bed with lovely finish.`}
+            {`I had blinds installed by Fyndecor and I'm extremely satisfied with their service.Highly recommend their expertise!`}
           </p>
         </div>
         <div className="feedback__card">
@@ -64,11 +61,9 @@ const CustomerFeedback = () => {
             <Star />
             <Star />
           </span>
-          <h5>{`Swati Singh`}</h5>
+          <h5>{`Vinay`}</h5>
           <p>
-            {`Thanks to Fyn Decor.`} <br />
-            {`Desperately wanted a bigger bed for my son's room. Picked Williams
-            Bed with lovely finish.`}
+            {`Fyndecor provided outstanding support for my curtain installation!`}
           </p>
         </div>
       </div>

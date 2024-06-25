@@ -3,20 +3,19 @@ import React from "react";
 const ExploreOurFurnitureRange = () => {
   return (
     <section className="explore__our__furniture__section">
-      <h2>Explore Our Furniture Range</h2>
-      <p>
-        Be it end-to-end interiors, renovation or modular solutions, we have it
-        all for your home or office. With a wide range of furniture & decor, we
-        have your back from start to finish.
+      <h2>Explore our Home Decor Services</h2>
+      <p className="mobile_hide">
+      
+Enjoy our expert services to improve the decor of your home. We offer professional installation and perfect crafting for everything. Easily transform your environment with our customized solutions.
       </p>
       <div className="furniture__cards">
         <div className="fancy__card card1">
           <div className="content">
             <h5>Curtain</h5>
             <p>
-              Our team of interior designers have put together ideas across
-              kitchen, bedroom, living room and more, to help you pick a design
-              that will best suit your home interior requirements.
+              
+You will get our service in so many ways to decorate your home with Curtains: curtains for bedroom
+, curtain for window, curtain in living room and more.
             </p>
             <p className="mob__p">Curtains for bedrooms</p>
           </div>
@@ -25,8 +24,7 @@ const ExploreOurFurnitureRange = () => {
           <div className="content">
             <h5>Blinds</h5>
             <p>
-              Our team of interior designers have put together ideas across
-              kitchen, bedroom, living room
+          Decorate your home with Blinds- blinds on window, roman blind, zebra blind, roller blind and more.
             </p>
           </div>
         </div>
@@ -34,8 +32,7 @@ const ExploreOurFurnitureRange = () => {
           <div className="content">
             <h5>Sofa Cover</h5>
             <p>
-              Our team of interior designers have put together ideas across
-              kitchen, bedroom, living room
+            Our experts will create a gorgeous cover for your sofa based on the sample you supply.
             </p>
           </div>
         </div>
@@ -45,8 +42,7 @@ const ExploreOurFurnitureRange = () => {
           <div className="content">
             <h5>Cushions</h5>
             <p>
-              Our team of interior designers have put together ideas across
-              kitchen, bedroom, living room and more,
+            Our experts will create a gorgeous cushion cover for your cushion based on the sample you supply.
             </p>
           </div>
         </div>
@@ -54,8 +50,7 @@ const ExploreOurFurnitureRange = () => {
           <div className="content">
             <h5>Channels</h5>
             <p>
-              Our team of interior designers have put together ideas across
-              kitchen, bedroom, living room and more,
+            Our team will also show you samples of channel for curtains so that it will be easier for you to choose.
             </p>
           </div>
         </div>
@@ -63,8 +58,7 @@ const ExploreOurFurnitureRange = () => {
           <div className="content">
             <h5>Rods</h5>
             <p>
-              Our team of interior designers have put together ideas across
-              kitchen, bedroom, living room and more,
+            Our team will also show you samples of rods for curtains so that it will be easier for you to choose.
             </p>
           </div>
         </div>

@@ -11,21 +11,21 @@ const WeProvideSection = () => {
         <Image src={freeMeasurement} alt=''/>
         <div className='content'>
             <h5>Free measurement</h5>
-            <p>Free measurement at  your home</p>
+            <p>Free measurement at your location</p>
         </div>
       </div>
       <div className='our__services'>
         <Image src={noInstallationCharges} alt=''/>
         <div className='content'>
             <h5>No Installation charges</h5>
-            <p>Free measurement at  your home</p>
+            <p>Enjoy free installation</p>
         </div>
       </div>
       <div className='our__services'>
         <Image src={yearOfExpertise} alt=''/>
         <div className='content'>
             <h5>25+ year of expertise</h5>
-            <p>Free measurement at  your home</p>
+            <p>25+ years of experience in this line</p>
         </div>
       </div>
     </section>
