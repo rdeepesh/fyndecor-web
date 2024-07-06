@@ -1,4 +1,8 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 const CustomerFeedback = () => {
   const Star = () => {
@@ -26,46 +30,75 @@ const CustomerFeedback = () => {
         have your back from start to finish.
       </p>
       <div className="feedback__wrapper">
-        <div className="feedback__card">
-          <span className="stars">
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-          </span>
-          <h5>{`Urvashi Malhotra`}</h5>
-          <p>
-            {`Thanks to Fyn Decor.`} <br />
-            {`You designed it exactly as I had thought and I am very happy.`}
-          </p>
-        </div>
-        <div className="feedback__card">
-          <span className="stars">
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-          </span>
-          <h5>{`Deepesh Rohilla`}</h5>
-          <p>
-            {`I had blinds installed by Fyndecor and I'm extremely satisfied with their service.Highly recommend their expertise!`}
-          </p>
-        </div>
-        <div className="feedback__card">
-          <span className="stars">
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-          </span>
-          <h5>{`Vinay`}</h5>
-          <p>
-            {`Fyndecor provided outstanding support for my curtain installation!`}
-          </p>
-        </div>
+        <Swiper 
+          modules={[Pagination]} 
+          spaceBetween={20}
+          slidesPerView={3}
+          pagination={{
+            clickable: true,
+          }}
+          breakpoints={{
+            200: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          }}
+        >
+          <SwiperSlide>
+            <div className="feedback__card">
+              <span className="stars">
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+              </span>
+              <h5>{`Urvashi Malhotra`}</h5>
+              <p>
+                {`Thanks to Fyn Decor.`} <br />
+                {`You designed it exactly as I had thought and I am very happy.`}
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="feedback__card">
+              <span className="stars">
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+              </span>
+              <h5>{`Deepesh Rohilla`}</h5>
+              <p>
+                {`I had blinds installed by Fyndecor and I'm extremely satisfied with their service.Highly recommend their expertise!`}
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="feedback__card">
+              <span className="stars">
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+              </span>
+              <h5>{`Vinay`}</h5>
+              <p>
+                {`Fyndecor provided outstanding support for my curtain installation!`}
+              </p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </section>
   );
