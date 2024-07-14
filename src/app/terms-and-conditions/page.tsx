@@ -1,5 +1,11 @@
+import { Metadata } from "next";
 import React from "react";
 import CommonPageSection from "../components/CommonPageSection";
+
+export const metadata: Metadata = {
+  title: "Fyn Decor | Terms and Conditions",
+  description: "Crafting Dreams, Designing Homes",
+};
 
 const page = () => {
   return (

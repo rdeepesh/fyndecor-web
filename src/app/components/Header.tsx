@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import logo from "../assets/logo/logo.svg";
 import Link from "next/link";
@@ -7,6 +7,7 @@ import { MOBILE_NO } from "../utils";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
+  const [showDropDown, setShowDropDown] = useState(false);
   const MenuIconSvg = () => (
     <svg
       width="26"
@@ -21,27 +22,65 @@ const Header = () => {
       />
     </svg>
   );
+  const serviceMenusList = [
+    {name:'Curtain', link:'/curtain'},
+    {name:'Blinds', link:'/blinds'},
+    {name:'Sofa', link:'/sofa'},
+    {name:'Channel', link:'/channel'},
+  ]
+
+  const handleIsActive = () => {
+    setIsActive(!isActive)
+  }
 
   return (
     <header className="header">
       <Link href={"/"} className="logo">
         <Image src={logo} alt="" />
       </Link>
-      <button type="button" className="menu__toggler" onClick={()=>setIsActive(!isActive)}>
+      <button
+        type="button"
+        className="menu__toggler"
+        onClick={handleIsActive}
+      >
         <MenuIconSvg />
       </button>
       <nav className={isActive ? "active" : ""}>
         <ul>
-          <li>
+          <li onClick={handleIsActive}>
             <Link href={"/"}>Home</Link>
           </li>
-          <li>
+          <li onClick={handleIsActive}>
             <Link href={"/contact"}>Contact Us</Link>
           </li>
           <li>
-            <Link href={"/services"}>Services</Link>
+            <Link href={""} onClick={()=>setShowDropDown(!showDropDown)}>
+              Services{" "}
+              <svg
+                width="19"
+                height="11"
+                viewBox="0 0 19 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.0644 1.45407L16.6711 0.060791L9.46262 7.26435L2.25412 0.060791L0.86084 1.45407L9.46262 10.0608L18.0644 1.45407Z"
+                  fill="black"
+                />
+              </svg>
+            </Link>
+            <ul className={`${showDropDown ? 'show' : ''} dropdown__menu`}>
+              {serviceMenusList?.map((item,key)=>(
+                <li key={key} onClick={()=>{
+                  setShowDropDown(false);
+                  handleIsActive();
+                  }}>
+                  <Link href={item.link}>{item.name}</Link>
+                </li>
+              ))}
+            </ul>
           </li>
-          <li>
+          <li onClick={handleIsActive}>
             <Link href={"/about"}>About Us</Link>
           </li>
         </ul>
