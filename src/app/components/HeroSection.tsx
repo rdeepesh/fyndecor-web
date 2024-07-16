@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
+import Modal from "./modal";
+import Link from "next/link";
 
 interface HeroSectionProps {
   onEnquireNowClick: () => void;
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({ onEnquireNowClick }) =>  {
+const HeroSection: React.FC<HeroSectionProps> = ({ onEnquireNowClick }) => {
   const SVG_01 = () => (
     <svg
       width="24"
@@ -104,9 +106,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onEnquireNowClick }) =>  {
   return (
     <section className="hero__section">
       <div className="content">
-        <h1>Customised Curtains, <br className="display_hide_text"/>Blinds Stitching and Fitting Services</h1>
+        <h1>
+          Customised Curtains, <br className="display_hide_text" />
+          Blinds Stitching and Fitting Services
+        </h1>
         <p>
-        We have lots of experience making custom curtains and blinds at FynDecor. Take advantage of our hassle-free, fast shipping and free measuring service.</p>
+          We have lots of experience making custom curtains and blinds at
+          FynDecor. Take advantage of our hassle-free, fast shipping and free
+          measuring service.
+        </p>
         <div className="we__provide__section__mob">
           <div className="our__services">
             <SVG_01 />
@@ -121,9 +129,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onEnquireNowClick }) =>  {
             <h5>25+ year of expertise</h5>
           </div>
         </div>
-        <button type="button" className="btn" onClick={onEnquireNowClick}>
+        <Link href="?modal=true">
+          <button type="button" className="btn">
           Enquire Now
-        </button>
+          </button>
+        </Link>
+        {/* <button type="button" className="btn" onClick={onEnquireNowClick}>
+          Enquire Now
+        </button> */}
       </div>
     </section>
   );

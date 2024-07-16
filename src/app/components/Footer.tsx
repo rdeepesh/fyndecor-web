@@ -2,10 +2,15 @@ import React from "react";
 import Image from "next/image";
 import logo from "../assets/logo/logo-white.svg";
 import whatsAppIcon from "../assets/icons/whatsapp.svg";
+import phone from "../assets/icons/phone.svg";
 import Link from "next/link";
 import { ADDRESS, MAIL_ID, MOBILE_NO } from "../utils";
 
-const Footer = () => {
+interface HeroSectionProps {
+  onEnquireNowClick: () => void;
+}
+
+const Footer: React.FC<HeroSectionProps> = ({ onEnquireNowClick }) => {
   const socialMediaLinks = [
     {
       name: "facebook",
@@ -139,6 +144,22 @@ const Footer = () => {
                 <p>{ADDRESS}</p>
               </li>
               <li>
+              <svg
+                  width="25"
+                  height="26"
+                  viewBox="0 0 25 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24.2894 18.8475L20.8006 15.3587C19.5546 14.1126 17.4364 14.6111 16.938 16.2309C16.5642 17.3523 15.3181 17.9753 14.1967 17.7261C11.7047 17.1031 8.3405 13.8634 7.71749 11.2468C7.34369 10.1254 8.0913 8.87936 9.2127 8.50561C10.8325 8.0072 11.3309 5.88899 10.0849 4.64298L6.59609 1.15415C5.59928 0.281948 4.10407 0.281948 3.23186 1.15415L0.864446 3.52157C-1.50297 6.01359 1.11365 12.6174 6.96989 18.4737C12.8261 24.3299 19.43 27.0712 21.922 24.5791L24.2894 22.2117C25.1617 21.2149 25.1617 19.7197 24.2894 18.8475Z"
+                    fill="white"
+                  />
+                </svg>
+                
+                <a href={`tel:${MOBILE_NO}`}>{MOBILE_NO}</a>
+              </li>
+              <li>
                 <svg
                   width="26"
                   height="20"
@@ -152,21 +173,6 @@ const Footer = () => {
                   />
                   <path
                     d="M1.94873 4.76847L12.193 11.5983C12.5808 11.8568 13.0252 11.986 13.4697 11.986C13.9142 11.986 14.3586 11.8568 14.7464 11.5983L24.9907 4.76847C25.6038 4.36002 25.9697 3.67643 25.9697 2.93864C25.9697 1.67003 24.9376 0.638 23.6691 0.638H3.27036C2.00181 0.638049 0.969728 1.67008 0.969728 2.93986C0.969347 3.30177 1.05855 3.65816 1.22937 3.97723C1.40019 4.29629 1.64733 4.56812 1.94873 4.76847Z"
-                    fill="white"
-                  />
-                </svg>
-                <a href={`tel:${MOBILE_NO}`}>{MOBILE_NO}</a>
-              </li>
-              <li>
-                <svg
-                  width="25"
-                  height="26"
-                  viewBox="0 0 25 26"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M24.2894 18.8475L20.8006 15.3587C19.5546 14.1126 17.4364 14.6111 16.938 16.2309C16.5642 17.3523 15.3181 17.9753 14.1967 17.7261C11.7047 17.1031 8.3405 13.8634 7.71749 11.2468C7.34369 10.1254 8.0913 8.87936 9.2127 8.50561C10.8325 8.0072 11.3309 5.88899 10.0849 4.64298L6.59609 1.15415C5.59928 0.281948 4.10407 0.281948 3.23186 1.15415L0.864446 3.52157C-1.50297 6.01359 1.11365 12.6174 6.96989 18.4737C12.8261 24.3299 19.43 27.0712 21.922 24.5791L24.2894 22.2117C25.1617 21.2149 25.1617 19.7197 24.2894 18.8475Z"
                     fill="white"
                   />
                 </svg>
@@ -195,7 +201,7 @@ const Footer = () => {
       {/* Phone/Call BTN */}
       <a
         href="tel:+91 9818010701"
-        className="fixed bg-white rounded-full bottom-[100px] right-[25px] z-50 flex items-center justify-center w-[60px] h-[60px] bg-white hover:bg-[color:var(--primary)] text-[color:var(--primary)] hover:text-[color:var(--white)] transition duration-300 ease-in-out shadow-lg"
+        className="mobile_hide_chat_icons fixed bg-white rounded-full bottom-[100px] right-[25px] z-50 flex items-center justify-center w-[60px] h-[60px] bg-white hover:bg-[color:var(--primary)] text-[color:var(--primary)] hover:text-[color:var(--white)] transition duration-300 ease-in-out shadow-lg"
       >
         <svg
           className="w-[30px] h-[30px]"
@@ -209,7 +215,7 @@ const Footer = () => {
       {/* WhatsApp BTN */}
       <a
         href="https://wa.me/919818010701"
-        className="fixed bg-white rounded-full bottom-[180px] right-[25px] z-50 flex items-center justify-center w-[60px] h-[60px] bg-white hover:bg-[color:var(--primary)] text-[color:var(--primary)] hover:text-[color:var(--white)] transition duration-300 ease-in-out shadow-lg"
+        className="mobile_hide_chat_icons fixed bg-white rounded-full bottom-[180px] right-[25px] z-50 flex items-center justify-center w-[60px] h-[60px] bg-white hover:bg-[color:var(--primary)] text-[color:var(--primary)] hover:text-[color:var(--white)] transition duration-300 ease-in-out shadow-lg"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -219,6 +225,22 @@ const Footer = () => {
           alt="whatsapp-logo"
         />
       </a>
+      <nav className="navbar fixed-bottom navbar-light display_hide fixed_bottom fixed_bottom_home">
+        <div className="container-fluid fixed-bottom-div">
+          {/* <div className="middle__line"></div> */}
+          <div className="starting_price">
+            <a href="tel:9818010701">
+              <Image src={phone} alt="" />
+              9818010701
+            </a>
+          </div>
+          <Link href="?modal=true">
+            <button type="button" className="btn">
+              Enquire Now
+            </button>
+          </Link>
+        </div>
+      </nav>
     </footer>
   );
 };
