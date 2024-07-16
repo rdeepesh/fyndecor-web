@@ -27,7 +27,9 @@ export default function Home() {
   };
   return (
     <main className="main__wrapper">
+      <div className="mobile_hide">
       <HeroSection onEnquireNowClick={scrollToEnquiryForm} />
+      </div>
       <WeProvideSection />
       <ExploreOurFurnitureRange />
       <ExploreOurFurnitureRange2 />

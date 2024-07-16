@@ -25,8 +25,8 @@ const Header = () => {
   const serviceMenusList = [
     {name:'Curtain', link:'/curtain'},
     {name:'Blinds', link:'/blinds'},
-    {name:'Sofa', link:'/sofa'},
-    {name:'Channel', link:'/channel'},
+    // {name:'Sofa', link:'/sofa'},
+    // {name:'Channel', link:'/channel'},
   ]
 
   const handleIsActive = () => {
