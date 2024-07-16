@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Modal from "./components/modal";
+import Modal from "./components/Modal";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Suspense } from "react";

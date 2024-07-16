@@ -1,5 +1,5 @@
 import React from "react";
-import Modal from "./modal";
+import Modal from "./Modal";
 import Link from "next/link";
 
 interface HeroSectionProps {

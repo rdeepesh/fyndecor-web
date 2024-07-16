@@ -10,7 +10,7 @@ interface HeroSectionProps {
   onEnquireNowClick: () => void;
 }
 
-const Footer: React.FC<HeroSectionProps> = ({ onEnquireNowClick }) => {
+const Footer = () => {
   const socialMediaLinks = [
     {
       name: "facebook",
