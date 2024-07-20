@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Modal from "./components/Modal";
-import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Suspense } from "react";
-import Loading from "./loading";
+import StoreProvider from "./lib/StoreProvider";
 
 export const metadata: Metadata = {
   title: "Fyn Decor",
@@ -42,11 +37,9 @@ export default function RootLayout({
         {/* <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossOrigin="anonymous"></link> */}
       </head>
       <body>
-        <ToastContainer />
-        <Header />
-        <Suspense fallback={<Loading />}>{children}</Suspense>
-        <Footer />
-        <Modal />
+        <StoreProvider>
+          {children}
+        </StoreProvider>
       </body>
     </html>
   );

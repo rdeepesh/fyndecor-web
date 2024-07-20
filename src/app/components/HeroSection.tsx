@@ -1,12 +1,10 @@
 import React from "react";
-import Modal from "./Modal";
-import Link from "next/link";
+import { useAppDispatch } from "../lib/hooks";
+import { modalOpen } from "../lib/features/modalSlice";
 
-interface HeroSectionProps {
-  onEnquireNowClick: () => void;
-}
+const HeroSection = () => {
+  const dispatch = useAppDispatch();
 
-const HeroSection: React.FC<HeroSectionProps> = ({ onEnquireNowClick }) => {
   const SVG_01 = () => (
     <svg
       width="24"
@@ -129,14 +127,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onEnquireNowClick }) => {
             <h5>25+ year of expertise</h5>
           </div>
         </div>
-        <Link href="?modal=true">
-          <button type="button" className="btn">
+        <button type="button" className="btn" onClick={()=>dispatch(modalOpen({open: true}))}>
           Enquire Now
-          </button>
-        </Link>
-        {/* <button type="button" className="btn" onClick={onEnquireNowClick}>
-          Enquire Now
-        </button> */}
+        </button>
       </div>
     </section>
   );

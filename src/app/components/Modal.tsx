@@ -1,20 +1,17 @@
 "use client";
-import React, { Suspense, useState } from "react";
+import React, { useState } from "react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { toast } from "react-toastify";
 import axios from "axios";
 import moment from "moment";
-import contactImage from "../assets/images/contact-us-form.png";
-import Image from "next/image";
-import { MAIL_ID, MOBILE_NO } from "../utils";
-import { useSearchParams, usePathname } from "next/navigation";
-import Link from "next/link";
+import { useAppDispatch, useAppSelector } from "../lib/hooks";
+import { modalOpen } from "../lib/features/modalSlice";
+import Loader from "./Loader";
 
 const Modal = () => {
-  const searchParams = useSearchParams();
-  const modal = searchParams.get("modal");
-  const pathname = usePathname();
+  const modal = useAppSelector((state: any) => state.modal.open);
+  const dispatch = useAppDispatch();
 
   const [loading, setLoading] = useState(false);
 
@@ -75,11 +72,13 @@ const Modal = () => {
   const { getFieldProps, handleSubmit, errors, touched } = formik;
 
   return (
-    <Suspense>
+    <>
       {modal && (
-        <dialog className="fixed left-0 top-0 w-full h-full bg-black bg-opacity-50 z-50 overflow-auto backdrop-blur flex justify-center items-center">
-          <div className="bg-white mt-[80px] rounded-lg modal-div">
-            <div className="flex flex-col items-center relative">
+        <>
+        {loading && <Loader />}
+        <dialog className="modal__popup">
+          <div className="modal__div">
+            <div className="inner__box">
               <div className="modal__us__wrapper">
                 <form onSubmit={handleSubmit}>
                   <h3>Contact Us</h3>
@@ -117,17 +116,16 @@ const Modal = () => {
                 </form>
               </div>
               <div className="close-modal absolute">
-                <Link href={pathname}>
-                  <button type="button" className="close_btn">
-                    X
-                  </button>
-                </Link>
+                <button type="button" className="close_btn" onClick={()=>dispatch(modalOpen({open: false}))}>
+                  X
+                </button>
               </div>
             </div>
           </div>
         </dialog>
+        </>
       )}
-    </Suspense>
+    </>
   );
 };
 
