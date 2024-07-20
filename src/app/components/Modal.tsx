@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { toast } from "react-toastify";
@@ -75,7 +75,7 @@ const Modal = () => {
   const { getFieldProps, handleSubmit, errors, touched } = formik;
 
   return (
-    <>
+    <Suspense>
       {modal && (
         <dialog className="fixed left-0 top-0 w-full h-full bg-black bg-opacity-50 z-50 overflow-auto backdrop-blur flex justify-center items-center">
           <div className="bg-white mt-[80px] rounded-lg modal-div">
@@ -127,7 +127,7 @@ const Modal = () => {
           </div>
         </dialog>
       )}
-    </>
+    </Suspense>
   );
 };
 
