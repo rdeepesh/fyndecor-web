@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+"use client";
 import React from "react";
 import PageBanner from "../components/PageBanner";
 import OurVisionSection from "../components/OurVisionSection";
@@ -7,11 +7,6 @@ import ourServicesImg from "../assets/images/our-services.png";
 import WeProvideSection2 from "../components/WeProvideSection2";
 import ContactUS from "../components/ContactUs";
 import WeDeliverBestQualitySection from "../components/WeDeliverBestQualitySection";
-
-export const metadata: Metadata = {
-  title: "Fyn Decor | About Us",
-  description: "Crafting Dreams, Designing Homes",
-};
 
 const page = () => {
   return (

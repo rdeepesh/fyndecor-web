@@ -1,12 +1,7 @@
-import { Metadata } from "next";
+"use client";
 import React from "react";
 import WeDeliverBestQualitySection from "../components/WeDeliverBestQualitySection";
 import WeProvideSection2 from "../components/WeProvideSection2";
-
-export const metadata: Metadata = {
-  title: "Fyn Decor | Curtain",
-  description: "Crafting Dreams, Designing Homes",
-};
 
 const page = () => {
   return (
