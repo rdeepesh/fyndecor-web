@@ -5,12 +5,12 @@ import whatsAppIcon from "../assets/icons/whatsapp.svg";
 import phone from "../assets/icons/phone.svg";
 import Link from "next/link";
 import { ADDRESS, MAIL_ID, MOBILE_NO } from "../utils";
-
-interface HeroSectionProps {
-  onEnquireNowClick: () => void;
-}
+import { useAppDispatch } from "../lib/hooks";
+import { modalOpen } from "../lib/features/modalSlice";
 
 const Footer = () => {
+  const dispatch = useAppDispatch();
+
   const socialMediaLinks = [
     {
       name: "facebook",
@@ -234,11 +234,9 @@ const Footer = () => {
               9818010701
             </a>
           </div>
-          <Link href="?modal=true">
-            <button type="button" className="btn">
-              Enquire Now
-            </button>
-          </Link>
+          <button type="button" className="btn" onClick={()=>dispatch(modalOpen({open: true}))}>
+            Enquire Now
+          </button>
         </div>
       </nav>
     </footer>

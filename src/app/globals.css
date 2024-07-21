@@ -83,7 +83,7 @@ body {
 .starting_price {
   border: 1px solid var(--primary);
   padding: 8px 20px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 /* footer bottom */
@@ -1647,6 +1647,14 @@ header.header nav ul li a svg {
   border-radius: 50%;
   box-shadow: 0 2px 2px #0000000d;
 }
+@media screen and (max-width: 600px){
+  .modal__div{
+    padding: 30px 15px;
+  }
+  .inner__box {
+    padding: 15px;
+  }
+}
 /* MODAL */
 
 /* ::::::RESPONSIVE BREAKPOINTS:::::: */
@@ -2224,11 +2232,6 @@ header.header nav ul li a svg {
 
   .contact__us__wrapper {
     padding: calc(var(--header-h-sm) + 50px) var(--container-px-sm) 50px;
-  }
-
-  .close-modal {
-    top: -34px;
-    right: -35px;
   }
 
   .modal__us__wrapper {
