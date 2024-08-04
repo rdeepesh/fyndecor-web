@@ -3,8 +3,8 @@ import React from "react";
 import WeDeliverBestQualitySection from "../components/WeDeliverBestQualitySection";
 import WeProvideSection2 from "../components/WeProvideSection2";
 import ServicePageBanner from "../components/ServicePageBanner";
-import curtain_banner_desk from "../assets/images/curtain_banner.png";
-import curtain_banner_mob from "../assets/images/curtain_banner_mob.png";
+import blind_banner_desk from "../assets/images/blind_banner.png";
+import blind_banner_mob from "../assets/images/blind_banner_mob.png";
 import ContactUS from "../components/ContactUs";
 import ServicesFurnitureRange from "../components/ServicesFurnitureRange";
 
@@ -12,8 +12,8 @@ const page = () => {
   return (
     <main className="service__page__wrapper blinds">
       <ServicePageBanner
-        desktopImg={curtain_banner_desk}
-        mobileImg={curtain_banner_mob}
+        desktopImg={blind_banner_desk}
+        mobileImg={blind_banner_mob}
         headText="Get your Home styled by Our Luxury Fabrics"
         headSubText="Curtains"
       />

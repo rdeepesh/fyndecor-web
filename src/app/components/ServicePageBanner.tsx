@@ -10,6 +10,7 @@ const ServicePageBanner = ({
   mobileImg,
   headText,
   headSubText,
+  buttonColor
 }: any) => {
   const dispatch = useAppDispatch();
 
@@ -25,6 +26,11 @@ const ServicePageBanner = ({
         <h2 className="banner__heading">
           {headText} <span>{headSubText}</span>
         </h2>
+        <div className="mob__tags">
+          <span>Sheer Curtain</span>
+          <span>Blackout curtain</span>
+          <span>Room Darkening Curtain</span>
+        </div>
         <button
           className="btn"
           onClick={() => dispatch(modalOpen({ open: true }))}
