@@ -253,120 +253,6 @@ header.header nav ul li a svg {
   color: var(--white) !important;
 }
 
-
-/* .display_hide_text {
-  display: none;
-}
-
-.display_hide {
-  display: none;
-}
-
-.mobile_hide {
-  display: block;
-}
-
-.mobile_hide_chat_icons {
-  display: inline-flex;
-}
-
-
-
-header.header {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--header-h-lg);
-  padding: 15px var(--container-px-lg);
-  border-bottom: 1px solid #D3D3D3;
-  background-color: var(--white);
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header.header .logo {
-  display: block;
-  width: 120px;
-}
-
-header.header .logo img {
-  height: 100%;
-}
-
-header.header nav ul {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-header.header nav ul li {
-  position: relative;
-}
-
-header.header nav ul li a {
-  padding: 3px 10px;
-  transition: 0.3s ease-in-out;
-  font-size: 16px;
-  font-weight: var(--fw-medium);
-  color: var(--black);
-  display: flex;
-  align-items: center;
-}
-
-header.header nav ul li a:hover {
-  color: var(--primary);
-}
-
-header.header nav ul li a svg {
-  width: 15px;
-  height: 15px;
-  margin-left: 5px;
-}
-
-.dropdown__menu {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  width: 200px;
-  background-color: var(--white);
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.1);
-  padding: 8px 5px !important;
-  border-radius: 5px;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s ease;
-}
-
-.dropdown__menu.show {
-  top: 40px;
-  opacity: 1;
-  visibility: visible;
-}
-
-.dropdown__menu li {
-  width: 100%;
-}
-
-.dropdown__menu li a {
-  padding: 5px 10px !important;
-  font-size: 14px !important;
-  width: 100%;
-  border-radius: 3px;
-}
-
-.dropdown__menu li a:hover {
-  background: var(--primary);
-  color: var(--white) !important;
-} */
-
 /* HEADER */
 
 
@@ -499,6 +385,7 @@ header.header nav ul li a svg {
   background: #EDE4F0;
   overflow: clip;
 }
+
 
 .furniture__cards .fancy__card.card1::after {
   position: absolute;
