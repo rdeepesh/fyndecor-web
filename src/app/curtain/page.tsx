@@ -3,7 +3,7 @@ import React from "react";
 import WeDeliverBestQualitySection from "../components/WeDeliverBestQualitySection";
 import WeProvideSection2 from "../components/WeProvideSection2";
 import ServicePageBanner from "../components/ServicePageBanner";
-import curtain_banner_desk from "../assets/images/curtain_banner.png";
+import curtain_banner_desk from "../assets/images/curtain_banner.webp";
 import curtain_banner_mob from "../assets/images/curtain_banner_mob.png";
 import ContactUS from "../components/ContactUs";
 import ServicesFurnitureRange from "../components/ServicesFurnitureRange";

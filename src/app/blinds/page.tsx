@@ -3,7 +3,7 @@ import React from "react";
 import WeDeliverBestQualitySection from "../components/WeDeliverBestQualitySection";
 import WeProvideSection2 from "../components/WeProvideSection2";
 import ServicePageBanner from "../components/ServicePageBanner";
-import blind_banner_desk from "../assets/images/blind_banner.png";
+import blind_banner_desk from "../assets/images/blind_banner.webp";
 import blind_banner_mob from "../assets/images/blind_banner_mob.png";
 import ContactUS from "../components/ContactUs";
 import ServicesFurnitureRange from "../components/ServicesFurnitureRange";
