@@ -118,13 +118,7 @@ const Footer = () => {
             <Image className="" src={logo} alt="fyndecor-logo" />
             <h5>Crafting Dreams, Designing Homes</h5>
             <p>
-              Welcome to Furniture Store, your go-to destination for quality and
-              stylish furniture. At Furniture Store, we believe in creating
-              spaces that reflect your personality and lifestyle. Whether you
-              are furnishing your home or office, we offer a wide range of
-              furniture options to suit every taste and budget. Our team of
-              skilled craftsmen ensures that each piece is crafted with
-              precision and attention to detail.
+            FynDecor provides high quality, Customised Curtains, Blinds, Cushion covers and Sofa covers at affordable prices. We offer a wide range of options including blackout curtains, sheer curtains, linen curtains and velvet curtains, as well as a variety of blinds such as vertical blinds, roller blinds, Venetian blinds, wooden blinds and motorised blinds. Our customized options will improve your living space beautifully. Book your appointment now!
             </p>
           </div>
           <div className="navigation__links">

@@ -17,11 +17,11 @@ const ExploreOurFurnitureRange2 = () => {
         <div className="fancy__card">
           <Image src={cur_01} alt="" />
           <div className="content">
-            <span className="tag">New</span>
-            <h5>Curtains</h5>
-            <p>For Make beautiful home</p>
+            <span className="tag">Get Offer</span>
+            <h5>Blackout Curtains</h5>
+            <p>Special for Window </p>
             <div className="price__wrapper">
-              <span className="price">₹4000/-</span>
+              <span className="price">₹6**/-</span>
               <Link href={`tel:${MOBILE_NO}`}>Call Now</Link>
             </div>
           </div>
@@ -29,11 +29,11 @@ const ExploreOurFurnitureRange2 = () => {
         <div className="fancy__card">
           <Image src={cur_01} alt="" />
           <div className="content">
-            <span className="tag">New</span>
-            <h5>Curtains</h5>
-            <p>For Make beautiful home</p>
+            <span className="tag">Premium</span>
+            <h5>Linen Curtains</h5>
+            <p>For a Gorgeous Home</p>
             <div className="price__wrapper">
-              <span className="price">₹4000/-</span>
+              <span className="price">₹9**/-</span>
               <Link href={`tel:${MOBILE_NO}`}>Call Now</Link>
             </div>
           </div>
@@ -41,11 +41,11 @@ const ExploreOurFurnitureRange2 = () => {
         <div className="fancy__card">
           <Image src={cur_01} alt="" />
           <div className="content">
-            <span className="tag">New</span>
-            <h5>Curtains</h5>
-            <p>For Make beautiful home</p>
+            <span className="tag">New Look</span>
+            <h5>Sheer Curtains</h5>
+            <p>For a Refined Home Look</p>
             <div className="price__wrapper">
-              <span className="price">₹4000/-</span>
+              <span className="price">₹8**/-</span>
               <Link href={`tel:${MOBILE_NO}`}>Call Now</Link>
             </div>
           </div>

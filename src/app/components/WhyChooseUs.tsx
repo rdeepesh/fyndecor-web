@@ -46,29 +46,24 @@ const WhyChooseUs = () => {
           <li>
             <CheckSvgIcon />
             <p>
-              Fyn Decor is a one-stop destination to seek the best interior
-              designers who will help you design the home of your dreams
+            With over 25 years of experience, our skilled team guarantees that every curtain, blind, and cushion cover is expertly made, resulting in high-quality products personalized to your specifications.
             </p>
           </li>
           <li>
             <CheckSvgIcon />
             <p>
-              We offer end to end services that include modular interiors,
-              installation of false ceilings, civil work, painting, electrical
-              work, plumbing services, flooring and tiling.
+            We offer a variety of fabrics and patterns, including high velvet, beautiful sheers, effective blackout curtains, and more. Our made-to-measure services ensure an exact fit for your space.
             </p>
           </li>
           <li>
             <CheckSvgIcon />
             <p>
-              Get some inspiration by browsing the latest kitchen, living room,
-              and bedroom interior designs to kickstart your home interior
-              journey with Livspace.
+            From the first discussion before the final fitting, we managed everything. Our staff offers skilled installation, assuring a smooth experience from start to finish.
             </p>
           </li>
           <li>
             <CheckSvgIcon />
-            <p>Highly Durable materials for your home decor</p>
+            <p>Fyndecor values your satisfaction. Our helpful and educated staff is always available to help with design options, measurements, and any concerns, guaranteeing that you get exactly what you want for your house.s</p>
           </li>
         </ul>
       </div>
