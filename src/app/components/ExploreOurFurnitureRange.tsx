@@ -3,11 +3,15 @@ import Image from "next/image";
 import freeMeasurement from "../assets/icons/free-measurement.svg";
 import noInstallationCharges from "../assets/icons/no-installation-charges.svg";
 import yearOfExpertise from "../assets/icons/year-of-expertise.svg";
+import Link from "next/link";
 
 const ExploreOurFurnitureRange = () => {
   return (
     <section className="explore__our__furniture__section">
-      <h1 className="display_hide">Explore Curtains, Blinds <span>Stitching</span> and <span>Fitting</span> Services</h1>
+      <h1 className="display_hide">
+        Explore Curtains, Blinds <span>Stitching</span> and <span>Fitting</span>{" "}
+        Services
+      </h1>
       <h2 className="mobile_hide">Explore our Home Decor Services</h2>
       <p className="mobile_hide">
         Enjoy our expert services to improve the decor of your home. We offer
@@ -31,26 +35,29 @@ const ExploreOurFurnitureRange = () => {
         </div>
       </div>
       <div className="furniture__cards">
-        <div className="fancy__card card1">
-          <div className="content">
-            <h5>Curtain</h5>
-            <p>
-              You will get our service in so many ways to decorate your home
-              with Curtains: curtains for bedroom , curtain for window, curtain
-              in living room and more.
-            </p>
-            <p className="mob__p">Curtains for bedrooms</p>
+        <Link href={"/curtain"}>
+          <div className="fancy__card card1">
+            <div className="content">
+              <h5>Curtain</h5>
+              <p>
+                You will get our service in so many ways to decorate your home
+                with Curtains: curtains for bedroom , curtain for window,
+                curtain in living room and more.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="fancy__card card2">
-          <div className="content">
-            <h5>Blinds</h5>
-            <p>
-              Decorate your home with Blinds- blinds on window, roman blind,
-              zebra blind, roller blind and more.
-            </p>
+        </Link>
+        <Link href={"/blinds"}>
+          <div className="fancy__card card2">
+            <div className="content">
+              <h5>Blinds</h5>
+              <p>
+                Decorate your home with Blinds- blinds on window, roman blind,
+                zebra blind, roller blind and more.
+              </p>
+            </div>
           </div>
-        </div>
+        </Link>
         <div className="fancy__card card3">
           <div className="content">
             <h5>Sofa Cover</h5>
