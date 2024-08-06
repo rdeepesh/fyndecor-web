@@ -2,12 +2,43 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import StoreProvider from "./lib/StoreProvider";
+import JsonLd from './components/JsonLd'  // Import the JsonLd component
 
 export const metadata: Metadata = {
   title: "FynDecor | Customised Curtain & Blinds at Affordable Prices",
-  description: "FynDecor offers high-quality, customized curtains, blinds, cushion covers, at affordable prices.  Our customised solutions will improve your living area. Book your appointment now!",
+  description: "FynDecor offers high-quality, customized curtains, blinds, cushion covers, at affordable prices. Our customised solutions will improve your living area. Book your appointment now!",
   keywords: "customised curtain, customised curtain near me, blinds for windows, curtain for window, curtain for home, curtains for living room, custom curtains, blinds near me, custom blinds, curtain stitching near me, curtain stitching types",
   robots: "index, follow"
+};
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://fyndecor.com/"
+  },
+  "headline": "best curtain",
+  "description": "best curtain decor",
+  "image": [
+    "https://fyndecor.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcurtains_01.a7952393.jpg&w=3840&q=75",
+    "https://fyndecor.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcurtains_01.a7952393.jpg&w=3840&q=75"
+  ],  
+  "author": {
+    "@type": "Organization",
+    "name": "fyndecor",
+    "url": "https://fyndecor.com/"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "fyndecor",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fyndecor.com/_next/static/media/logo.c7520c04.svg"
+    }
+  },
+  "datePublished": "2024-09-01",
+  "dateModified": "2024-07-16"
 };
 
 export default function RootLayout({
@@ -44,6 +75,7 @@ export default function RootLayout({
         <StoreProvider>
           {children}
         </StoreProvider>
+        <JsonLd data={schemaData} />
       </body>
     </html>
   );
