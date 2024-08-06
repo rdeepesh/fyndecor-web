@@ -92,9 +92,54 @@ const CustomerFeedback = () => {
                 <Star />
                 <Star />
               </span>
-              <h5>{`Vinay`}</h5>
+              <h5>{`Sanjay Sinha`}</h5>
               <p>
-                {`Fyndecor provided outstanding support for my curtain installation!`}
+                {`I ordered customized blackout curtains and motorized blinds, and they have transformed my living space beautifully.`}
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="feedback__card">
+              <span className="stars">
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+              </span>
+              <h5>{`Vikas Verma`}</h5>
+              <p>
+                {`Your team is very good, we are happy with the installation and delivery too.`}
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="feedback__card">
+              <span className="stars">
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+              </span>
+              <h5>{`Shivam Maheshwari`}</h5>
+              <p>
+                {`The range of options available is impressive, and the team helped me choose the perfect velvet curtains and roller blinds for my home.`}
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="feedback__card">
+              <span className="stars">
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+              </span>
+              <h5>{`Ashok`}</h5>
+              <p>
+                {`The free measurement and installation service was fast, and the whole process was smooth. I highly suggest Fyndecor.`}
               </p>
             </div>
           </SwiperSlide>

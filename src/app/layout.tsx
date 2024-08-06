@@ -4,8 +4,10 @@ import "react-toastify/dist/ReactToastify.css";
 import StoreProvider from "./lib/StoreProvider";
 
 export const metadata: Metadata = {
-  title: "Fyn Decor",
-  description: "Crafting Dreams, Designing Homes",
+  title: "FynDecor | Customised Curtain & Blinds at Affordable Prices",
+  description: "FynDecor offers high-quality, customized curtains, blinds, cushion covers, at affordable prices.  Our customised solutions will improve your living area. Book your appointment now!",
+  keywords: "customised curtain, customised curtain near me, blinds for windows, curtain for window, curtain for home, curtains for living room, custom curtains, blinds near me, custom blinds, curtain stitching near me, curtain stitching types",
+  robots: "index, follow"
 };
 
 export default function RootLayout({
@@ -28,13 +30,14 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
-        ></link>
+        />
         {/* Rancho */}
         <link
           href="https://fonts.googleapis.com/css2?family=Rancho&display=swap"
           rel="stylesheet"
         />
-        {/* <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossOrigin="anonymous"></link> */}
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://fyndecor.com/" />
         <meta name="google-site-verification" content="CG6WojC5x-dZ4013-lf45MPLMWNTw_4n0GUDu0d4ZkI" />
       </head>
       <body>

@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
           <div className="content">
             <span className="new">New</span>
             <h6 className="tag">Curtains</h6>
-            <span className="price">₹4000/-</span>
+            <span className="price">₹4**/-</span>
           </div>
         </div>
         <Image src={new_cur_02} alt="" />

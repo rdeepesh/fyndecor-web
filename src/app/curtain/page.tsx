@@ -7,9 +7,9 @@ import curtain_banner_desk from "../assets/images/curtain_banner.webp";
 import curtain_banner_mob from "../assets/images/curtain_banner_mob.png";
 import ContactUS from "../components/ContactUs";
 import ServicesFurnitureRange from "../components/ServicesFurnitureRange";
-
-const page = () => {
-  return (
+import Head from "next/head";
+const page = () => {  return (
+    <>
     <main className="service__page__wrapper curtains">
       <ServicePageBanner
         desktopImg={curtain_banner_desk}
@@ -55,6 +55,7 @@ const page = () => {
         }
       />
     </main>
+    </>
   );
 };
 
