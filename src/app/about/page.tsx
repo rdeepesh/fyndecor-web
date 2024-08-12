@@ -118,7 +118,7 @@ const page = () => {
       {/* Description */}
       <meta name="description" content="FynDecor offers high-quality, customized curtains, blinds, cushion covers, at affordable prices. Our customized solutions will improve your living area. Book your appointment now!" />
       {/* Keywords */}
-      <meta name="keywords" content="customised curtain, customised curtain near me, blinds for windows, curtain for window, curtain for home, curtains for living room, custom curtains, blinds near me, custom blinds, curtain stitching near me, curtain stitching types" />
+      <meta name="keywords" content="customized curtain, customized curtain near me, blinds for windows, curtain for window, curtain for home, curtains for living room, custom curtains, blinds near me, custom blinds, curtain stitching near me, curtain stitching types" />
       {/* Robots */}
       <meta name="robots" content="index, follow" />
       {/* Canonical URL */}
