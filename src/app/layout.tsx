@@ -109,8 +109,6 @@ const schemaData = [{
 }
 ]
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{

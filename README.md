@@ -1,4 +1,4 @@
 
-# [FynDecor](https://fyndecor.netlify.app)
+# [FynDecor](https://fyndecor.com)
 
 Crafting Dreams, Designing Homes
