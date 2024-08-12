@@ -113,7 +113,7 @@ const page = () => {
     <>
     <Head>
       {/* Title */}
-      <title>FynDecor | Customized Curtain & Blinds at Affordable Prices</title>
+      <title>FynDecor</title>
       {/* Description */}
       <meta name="description" content="FynDecor offers high-quality, customized curtains, blinds, cushion covers, at affordable prices. Our customized solutions will improve your living area. Book your appointment now!" />
       {/* Keywords */}
