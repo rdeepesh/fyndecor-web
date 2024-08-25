@@ -5,10 +5,13 @@ import StoreProvider from "./lib/StoreProvider";
 import JsonLd from './components/JsonLd'  // Import the JsonLd component
 
 export const metadata: Metadata = {
-  // title: "FynDecor | Customised Curtain & Blinds at Affordable Prices",
-  // description: "FynDecor offers high-quality, customized curtains, blinds, cushion covers, at affordable prices. Our customised solutions will improve your living area. Book your appointment now!",
-  // keywords: "customised curtain, customised curtain near me, blinds for windows, curtain for window, curtain for home, curtains for living room, custom curtains, blinds near me, custom blinds, curtain stitching near me, curtain stitching types",
-  // robots: "index, follow"
+  title: "FynDecor | Customised Curtain & Blinds at Affordable Prices",
+  description: "FynDecor offers high-quality, customized curtains, blinds, cushion covers, at affordable prices. Our customised solutions will improve your living area. Book your appointment now!",
+  keywords: "customised curtain, customised curtain near me, blinds for windows, curtain for window, curtain for home, curtains for living room, custom curtains, blinds near me, custom blinds, curtain stitching near me, curtain stitching types",
+  robots: "index, follow",
+  alternates: {
+    canonical: 'https://fyndecor.com',
+  }
 };
 
 const schemaData = [{
@@ -143,7 +146,7 @@ export default function RootLayout({
         <StoreProvider>
           {children}
         </StoreProvider>
-        {/* <JsonLd data={schemaData} /> */}
+        <JsonLd data={schemaData} />
       </body>
     </html>
   );
