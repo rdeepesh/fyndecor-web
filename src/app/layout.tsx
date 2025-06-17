@@ -26,12 +26,12 @@ const schemaData = [{
   "image": [
     "https://fyndecor.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffur_cur_01.4f6add6a.png&w=640&q=75",
     "https://fyndecor.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffur_cur_03.d564b5ad.png&w=640&q=75"
-  ],  
+  ],
   "author": {
     "@type": "Organization",
     "name": "FynDecor",
     "url": "https://fyndecor.com/"
-  },  
+  },
   "publisher": {
     "@type": "Organization",
     "name": "FynDecor",
@@ -42,7 +42,7 @@ const schemaData = [{
   },
   "datePublished": "2024-09-01",
   "dateModified": "2024-07-16"
-}, 
+},
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -53,28 +53,28 @@ const schemaData = [{
       "@type": "Answer",
       "text": "The main differences between curtains and blinds are Curtains are made of cloth and hang from a rod above the window, Primarily used for privacy and decoration. Blinds can be made of wood, metal, or plastic and feature panels that can be switched to control light."
     }
-  },{
+  }, {
     "@type": "Question",
     "name": "Which is cheaper, curtains or blinds?",
     "acceptedAnswer": {
       "@type": "Answer",
       "text": "Blinds are normally less expensive than curtains, but prices differ depending on material, size, and quality."
     }
-  },{
+  }, {
     "@type": "Question",
     "name": "What's best, curtains or blinds?",
     "acceptedAnswer": {
       "@type": "Answer",
       "text": "The option is based on your needs: Curtains are better for decor and protection. Blinds are excellent for light control and an attractive appearance."
     }
-  },{
+  }, {
     "@type": "Question",
     "name": "Can I use blinds without curtains?",
     "acceptedAnswer": {
       "@type": "Answer",
       "text": "Yes, blinds can be used without curtains. Blinds can offer both privacy and light control on the inside."
     }
-  },{
+  }, {
     "@type": "Question",
     "name": "Which blinds are better for home?",
     "acceptedAnswer": {
@@ -85,18 +85,18 @@ const schemaData = [{
 },
 
 {
-  "@context": "https://schema.org/", 
-  "@type": "BreadcrumbList", 
+  "@context": "https://schema.org/",
+  "@type": "BreadcrumbList",
   "itemListElement": [{
-    "@type": "ListItem", 
-    "position": 1, 
+    "@type": "ListItem",
+    "position": 1,
     "name": "Curtains",
-    "item": "https://fyndecor.com/curtain"  
-  },{
-    "@type": "ListItem", 
-    "position": 2, 
+    "item": "https://fyndecor.com/curtain"
+  }, {
+    "@type": "ListItem",
+    "position": 2,
     "name": "Blinds",
-    "item": "https://fyndecor.com/blinds"  
+    "item": "https://fyndecor.com/blinds"
   }]
 },
 {
@@ -141,8 +141,19 @@ export default function RootLayout({
         {/* Canonical URL */}
         {/* <link rel="canonical" href="https://fyndecor.com/" /> */}
         <meta name="google-site-verification" content="CG6WojC5x-dZ4013-lf45MPLMWNTw_4n0GUDu0d4ZkI" />
+        <script dangerouslySetInnerHTML={{
+          __html: `
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KC2Q5W5S');
+    `,
+        }} />
       </head>
       <body>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KC2Q5W5S"
+          height="0" width="0"  style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
         <StoreProvider>
           {children}
         </StoreProvider>
