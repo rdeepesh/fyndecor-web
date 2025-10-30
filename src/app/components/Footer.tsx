@@ -194,7 +194,7 @@ const Footer = () => {
 
       {/* Phone/Call BTN */}
       <a
-        href="tel:+91 9818010701"
+        href="tel:+91 9818013701"
         className="mobile_hide_chat_icons fixed bg-white rounded-full bottom-[100px] right-[25px] z-50 flex items-center justify-center w-[60px] h-[60px] bg-white hover:bg-[color:var(--primary)] text-[color:var(--primary)] hover:text-[color:var(--white)] transition duration-300 ease-in-out shadow-lg"
       >
         <svg
@@ -208,7 +208,7 @@ const Footer = () => {
       </a>
       {/* WhatsApp BTN */}
       <a
-        href="https://wa.me/919818010701"
+        href="https://wa.me/919818013701"
         className="mobile_hide_chat_icons fixed bg-white rounded-full bottom-[180px] right-[25px] z-50 flex items-center justify-center w-[60px] h-[60px] bg-white hover:bg-[color:var(--primary)] text-[color:var(--primary)] hover:text-[color:var(--white)] transition duration-300 ease-in-out shadow-lg"
         target="_blank"
         rel="noopener noreferrer"
@@ -223,9 +223,9 @@ const Footer = () => {
         <div className="container-fluid fixed-bottom-div">
           {/* <div className="middle__line"></div> */}
           <div className="starting_price">
-            <a href="tel:9818010701">
+            <a href="tel:9818013701">
               <Image src={phone} alt="" />
-              9818010701
+              9818013701
             </a>
           </div>
           <button type="button" className="btn" onClick={()=>dispatch(modalOpen({open: true}))}>
