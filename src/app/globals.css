@@ -59,6 +59,15 @@ body {
   margin: 0;
   padding: 0;
 }
+/* Seo */
+
+.seo_content {
+margin-bottom: 20px;
+}
+.seo-content-heading {
+  font-weight: 500;
+}
+
 
 /* BUTTON */
 .btn {
