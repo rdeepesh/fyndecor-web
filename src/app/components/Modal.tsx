@@ -15,9 +15,6 @@ const Modal = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const GOOGLE_SHEET_URL =
-    "https://script.google.com/macros/s/AKfycbweahuNeACTTm0KVxw5EkABGQ-T-8vHG74DgRWAQh4seyjigh5RfrUzP9lGpcXpeK0/exec";
-
   const initialValues = {
     Name: "",
     Email: "",
@@ -49,17 +46,22 @@ const Modal = () => {
       formData.append("Message", values.Message);
       formData.append("Date", moment().format("MMMM Do YYYY, h:mm:ss a"));
       setLoading(true);
-      await axios({
-        method: "post",
-        url: GOOGLE_SHEET_URL,
-        data: formData,
-        headers: { "Content-Type": "multipart/form-data" },
+
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
+      // store in db(admin panel)
+      await axios.post(`${API_URL}/leads`, {
+        name: values.Name,
+        email: values.Email,
+        mobile: values.Mobile,
+        message: values.Message,
+        source: "website",
+        // "location": "Mumbai, India"
       })
         .then((response) => {
           // console.log("FORM_API_RES:::", response);
-          setLoading(false);
           toast.success("Thanks for contacting us.");
           resetForm();
+          setLoading(false);
         })
         .catch((error) => {
           setLoading(false);
@@ -75,54 +77,54 @@ const Modal = () => {
     <>
       {modal && (
         <>
-        {loading && <Loader />}
-        <dialog className="modal__popup">
-          <div className="modal__div">
-            <div className="inner__box">
-              <div className="modal__us__wrapper">
-                <form onSubmit={handleSubmit}>
-                  <h3>Contact Us</h3>
-                  <p>Crafting Dreams, Designing Homes</p>
-                  <div className="input__group">
-                    <input {...getFieldProps("Name")} placeholder="Name*" />
-                    {errors.Name && touched.Name ? (
-                      <span className="err_msg">{errors.Name}</span>
-                    ) : null}
-                  </div>
-                  <div className="input__group">
-                    <input
-                      type="email"
-                      {...getFieldProps("Email")}
-                      placeholder="Email*"
-                    />
-                    {errors.Email && touched.Email ? (
-                      <span className="err_msg">{errors.Email}</span>
-                    ) : null}
-                  </div>
-                  <div className="input__group">
-                    <input {...getFieldProps("Mobile")} placeholder="Mobile*" />
-                    {errors.Mobile && touched.Mobile ? (
-                      <span className="err_msg">{errors.Mobile}</span>
-                    ) : null}
-                  </div>
-                  <div className="input__group">
-                    <textarea
-                      {...getFieldProps("Message")}
-                      placeholder="Message Optional"
-                      rows={3}
-                    ></textarea>
-                  </div>
-                  <button className="btn">Book Now</button>
-                </form>
-              </div>
-              <div className="close-modal absolute">
-                <button type="button" className="close_btn" onClick={()=>dispatch(modalOpen({open: false}))}>
-                  X
-                </button>
+          {loading && <Loader />}
+          <dialog className="modal__popup">
+            <div className="modal__div">
+              <div className="inner__box">
+                <div className="modal__us__wrapper">
+                  <form onSubmit={handleSubmit}>
+                    <h3>Contact Us</h3>
+                    <p>Crafting Dreams, Designing Homes</p>
+                    <div className="input__group">
+                      <input {...getFieldProps("Name")} placeholder="Name*" />
+                      {errors.Name && touched.Name ? (
+                        <span className="err_msg">{errors.Name}</span>
+                      ) : null}
+                    </div>
+                    <div className="input__group">
+                      <input
+                        type="email"
+                        {...getFieldProps("Email")}
+                        placeholder="Email*"
+                      />
+                      {errors.Email && touched.Email ? (
+                        <span className="err_msg">{errors.Email}</span>
+                      ) : null}
+                    </div>
+                    <div className="input__group">
+                      <input {...getFieldProps("Mobile")} placeholder="Mobile*" />
+                      {errors.Mobile && touched.Mobile ? (
+                        <span className="err_msg">{errors.Mobile}</span>
+                      ) : null}
+                    </div>
+                    <div className="input__group">
+                      <textarea
+                        {...getFieldProps("Message")}
+                        placeholder="Message Optional"
+                        rows={3}
+                      ></textarea>
+                    </div>
+                    <button className="btn">Book Now</button>
+                  </form>
+                </div>
+                <div className="close-modal absolute">
+                  <button type="button" className="close_btn" onClick={() => dispatch(modalOpen({ open: false }))}>
+                    X
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        </dialog>
+          </dialog>
         </>
       )}
     </>
