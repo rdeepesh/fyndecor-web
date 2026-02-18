@@ -10,11 +10,8 @@ import contactImage from "../assets/images/contact-us-form.png";
 import Image from "next/image";
 import { MAIL_ID, MOBILE_NO } from "../utils";
 
-const ContactUS = ({hideContactInfo}: any) => {
+const ContactUS = ({ hideContactInfo }: any) => {
   const [loading, setLoading] = useState(false);
-
-  const GOOGLE_SHEET_URL =
-    "https://script.google.com/macros/s/AKfycbweahuNeACTTm0KVxw5EkABGQ-T-8vHG74DgRWAQh4seyjigh5RfrUzP9lGpcXpeK0/exec";
 
   const initialValues = {
     Name: "",
@@ -47,17 +44,22 @@ const ContactUS = ({hideContactInfo}: any) => {
       formData.append("Message", values.Message);
       formData.append("Date", moment().format("MMMM Do YYYY, h:mm:ss a"));
       setLoading(true);
-      await axios({
-        method: "post",
-        url: GOOGLE_SHEET_URL,
-        data: formData,
-        headers: { "Content-Type": "multipart/form-data" },
+
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
+      // store in db(admin panel)
+      await axios.post(`${API_URL}/leads`, {
+        name: values.Name,
+        email: values.Email,
+        mobile: values.Mobile,
+        message: values.Message,
+        source: "website",
+        // "location": "Mumbai, India"
       })
         .then((response) => {
           // console.log("FORM_API_RES:::", response);
-          setLoading(false);
           toast.success("Thanks for contacting us.");
           resetForm();
+          setLoading(false);
         })
         .catch((error) => {
           setLoading(false);
