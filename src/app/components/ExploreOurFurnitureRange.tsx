@@ -20,20 +20,18 @@ const ExploreOurFurnitureRange = () => {
         transform your environment with our customized solutions.
       </p>
       <div className="our-usp display_hide">
-        <div className="our-usp-div">
-          <div className="usp-points">
-            <Image src={freeMeasurement} alt="" />
-            <p>Free measurement</p>
-          </div>
-          <div className="usp-points">
-            <Image src={noInstallationCharges} alt="" />
-            <p>No Installation charges</p>
-          </div>
-          <div className="usp-points">
-            <Image src={yearOfExpertise} alt="" />
-            <p>25+ year of expertise</p>
-          </div>
-        </div>
+        <span>
+          <Image src={freeMeasurement} alt="" width={16} />
+          Free measurement
+        </span>
+        <span>
+          <Image src={noInstallationCharges} alt="" width={16} />
+          No Installation charges
+        </span>
+        <span>
+          <Image src={yearOfExpertise} alt="" width={16} />
+          25+ year of expertise
+        </span>
       </div>
       <div className="furniture__cards">
         <Link href={"/curtain"}>
