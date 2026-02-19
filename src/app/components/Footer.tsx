@@ -70,6 +70,8 @@ const Footer = () => {
     { name: "Terms & Conditions", link: "/terms-and-conditions" },
   ];
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="footer__content">
@@ -137,7 +139,7 @@ const Footer = () => {
         </div>
         <div className="copyright__and__media">
           <span>
-            © 2024 <a href="/">FynDecor</a>. All Rights Reserved.
+            © {currentYear} <a href="/">FynDecor</a>. All Rights Reserved.
           </span>
           <div className="social__links">
             {socialMediaLinks?.map((item, ind) => {
